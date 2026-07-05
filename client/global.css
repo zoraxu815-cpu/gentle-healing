@@ -1,0 +1,174 @@
+@import 'tailwindcss';
+@import 'uniwind';
+@import './heroui/styles';
+
+@theme {
+  /* Primitive Colors */
+  --white: #FFFFFF;
+  --black: #000000;
+  --snow: #FAFAFA;
+  --eclipse: #1A1A1A;
+
+  /* Border */
+  --border-width: 1px;
+  --field-border-width: 1px;
+
+  /* Base radius - 简约小圆角 */
+  --radius: 0.25rem;
+  --field-radius: 0.5rem;
+
+  /* Opacity */
+  --opacity-disabled: 0.4;
+}
+
+@layer theme {
+  :root {
+    @variant light {
+      /* Base Colors - Ins极简 */
+      --background: #FAFAFA;
+      --foreground: #1A1A1A;
+
+      /* Surface */
+      --surface: #FFFFFF;
+      --surface-foreground: var(--foreground);
+
+      /* Overlay */
+      --overlay: #FFFFFF;
+      --overlay-foreground: var(--foreground);
+
+      /* Muted */
+      --muted: #999999;
+
+      /* Default */
+      --default: #F5F5F5;
+      --default-foreground: #1A1A1A;
+
+      /* Accent - 莫兰迪奶茶色 */
+      --accent: #C4A89F;
+      --accent-foreground: #FFFFFF;
+
+      /* Form Fields */
+      --field-background: #FFFFFF;
+      --field-foreground: #1A1A1A;
+      --field-placeholder: #999999;
+      --field-border: #E5E5E5;
+
+      /* Status Colors */
+      --success: #7C9A8E;
+      --success-foreground: #FFFFFF;
+
+      --warning: #D4A574;
+      --warning-foreground: #FFFFFF;
+
+      --danger: #C49B9B;
+      --danger-foreground: #FFFFFF;
+
+      /* Component Colors */
+      --segment: #F5F5F5;
+      --segment-foreground: #1A1A1A;
+
+      /* Misc */
+      --border: #E5E5E5;
+      --separator: #F0F0F0;
+      --focus: var(--accent);
+      --link: var(--foreground);
+
+      /* Shadows - 极简扁平阴影 */
+      --surface-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+      --overlay-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+      --field-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+    }
+
+    @variant dark {
+      /* Base Colors */
+      --background: #0A0A0A;
+      --foreground: #FAFAFA;
+
+      /* Surface */
+      --surface: #141414;
+      --surface-foreground: var(--foreground);
+
+      /* Overlay */
+      --overlay: #1A1A1A;
+      --overlay-foreground: var(--foreground);
+
+      --muted: #666666;
+
+      --default: #1A1A1A;
+      --default-foreground: var(--foreground);
+
+      --accent: #C4A89F;
+      --accent-foreground: #1A1A1A;
+
+      /* Form Fields */
+      --field-background: #141414;
+      --field-foreground: var(--foreground);
+      --field-placeholder: #666666;
+      --field-border: #2A2A2A;
+
+      /* Status Colors */
+      --success: #7C9A8E;
+      --success-foreground: #FFFFFF;
+
+      --warning: #D4A574;
+      --warning-foreground: #1A1A1A;
+
+      --danger: #C49B9B;
+      --danger-foreground: #1A1A1A;
+
+      /* Component Colors */
+      --segment: #1A1A1A;
+      --segment-foreground: var(--foreground);
+
+      /* Misc */
+      --border: #2A2A2A;
+      --separator: #1F1F1F;
+      --focus: var(--accent);
+      --link: var(--foreground);
+
+      /* Shadows */
+      --surface-shadow: 0 0 0 0 transparent;
+      --overlay-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+      --field-shadow: 0 0 0 0 transparent;
+    }
+  }
+}
+
+@theme inline static {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-surface-hover: color-mix(in oklab, var(--surface) 95%, var(--surface-foreground) 5%);
+
+  --color-overlay: var(--overlay);
+  --color-overlay-foreground: var(--overlay-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted);
+
+  --color-default: var(--default);
+  --color-default-foreground: var(--default-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+
+  --color-border: var(--border);
+  --color-separator: var(--separator);
+
+  /* Ins风额外颜色 */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+  --color-accent-warm: #C4A89F;
+}
