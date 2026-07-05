@@ -2,7 +2,15 @@
   "$schema": "https://railway.com/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "pnpm install && cd client && npx expo export --platform web && cd ../server && pnpm build"
+    "buildCommand": "pnpm install && cd client && npx expo export --platform web && cd ../server && pnpm build",
+    "nixpacksPlan": {
+      "providers": ["node"],
+      "phases": {
+        "setup": {
+          "nixPkgs": ["nodejs_20", "pnpm"]
+        }
+      }
+    }
   },
   "deploy": {
     "startCommand": "cd server && node dist/index.js",
